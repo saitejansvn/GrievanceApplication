@@ -1,0 +1,24 @@
+package com.teja.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="clean_and_green_details")
+public class CleanAndGreenDetails {
+
+	@Id
+	@Column(name="clean_green_details_id")
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer cleanGreenDetailsId;
+	
+	private String cleanAndGreenSubType;
+	
+	private String complaintDescription;
+	
+	
+}

@@ -1,0 +1,18 @@
+package com.teja.service;
+
+import org.springframework.stereotype.Service;
+
+import com.teja.model.CustomResponse;
+import com.teja.model.GrievanceTypeDetailsModel;
+
+@Service
+public class GrievanceService {
+
+	public CustomResponse submitGrievance(GrievanceTypeDetailsModel grievanceTypeDetailsModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

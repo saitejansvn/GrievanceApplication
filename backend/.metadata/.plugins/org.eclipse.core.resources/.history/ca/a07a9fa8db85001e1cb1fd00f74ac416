@@ -1,0 +1,27 @@
+package com.teja.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="health_details")
+public class HealthDetails {
+
+	@Id
+	@Column(name="health_details_id")
+	private Integer HealthDetailsId;
+	
+	@Column(name="queue_number")
+	private String queueNumber;
+	
+	@Column(name="section_number")
+	private String sectionNumber;
+	
+	@Column(name="gate_number")
+	private String gateNumber;
+	
+	private String description;
+	
+}

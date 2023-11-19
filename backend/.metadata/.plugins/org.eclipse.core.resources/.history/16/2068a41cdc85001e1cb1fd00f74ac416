@@ -1,0 +1,40 @@
+package com.teja.service;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import com.teja.constants.GrievanceConstants;
+import com.teja.model.CustomResponse;
+import com.teja.model.GrievanceTypeDetailsModel;
+
+@Service
+public class GrievanceService {
+
+	/*Service Method for Submitting Grievance Based on Type*/
+	public CustomResponse submitGrievance(GrievanceTypeDetailsModel grievanceTypeDetailsModel) {
+		CustomResponse customResponse=new CustomResponse();
+		try {
+		if(grievanceTypeDetailsModel!=null) {
+			//Check GrievanceType
+		if(grievanceTypeDetailsModel.getGrievanceType().
+				equalsIgnoreCase(GrievanceConstants.HEALTH.toString())) {
+					
+			
+			
+			
+		}
+			
+			
+			
+			
+		}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return customResponse;
+	}
+
+	
+	
+}

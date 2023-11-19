@@ -1,0 +1,11 @@
+package com.teja.constants;
+
+public enum GrievanceConstants {
+	HEALTH,
+	CLEANANDGREEN,
+	LOCKERS,
+	TICKETS,
+	PARKING,
+	QUEUE,
+	FOOD
+}

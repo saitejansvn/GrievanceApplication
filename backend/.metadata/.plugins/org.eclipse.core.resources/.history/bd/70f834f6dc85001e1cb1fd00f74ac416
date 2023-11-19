@@ -1,0 +1,32 @@
+package com.teja.entity;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="grivenace_type")
+public class GrievanceTypeEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="grievance_id")
+	private Integer grievanceId;
+	
+	@Column(name="grivenace_type")
+	private String  grievanceType;
+	
+	@Column(name="grievance_status")
+	private String grievanceStatus;
+	
+	@Column(name="created_date_time_stamp")
+	private LocalDateTime createdDateTimeStamp;
+	
+	@Column(name="modified_date_time_stamp")
+	private LocalDateTime modifiedDateTimeStamp;
+}

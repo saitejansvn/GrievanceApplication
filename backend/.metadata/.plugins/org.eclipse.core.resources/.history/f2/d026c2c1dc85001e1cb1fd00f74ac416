@@ -1,0 +1,60 @@
+package com.teja.service;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.teja.constants.GrievanceConstants;
+import com.teja.entity.HealthDetails;
+import com.teja.model.CustomResponse;
+import com.teja.model.GrievanceTypeDetailsModel;
+import com.teja.repo.IHealthDetailsTypeRepository;
+
+@Service
+public class GrievanceService {
+
+	@Autowired
+	private IHealthDetailsTypeRepository healthDetailsTypeRepository;
+	
+	
+	
+	/*Service Method for Submitting Grievance Based on Type*/
+	public CustomResponse submitGrievance(GrievanceTypeDetailsModel grievanceTypeDetailsModel) {
+		CustomResponse customResponse=new CustomResponse();
+		try {
+		if(grievanceTypeDetailsModel!=null) {
+			//Check GrievanceTypes
+		if(grievanceTypeDetailsModel.getGrievanceType().
+				equalsIgnoreCase(GrievanceConstants.HEALTH.toString())) {
+					
+			HealthDetails healthDetails=new HealthDetails();
+			BeanUtils.copyProperties(grievanceTypeDetailsModel.getHealthModel(),healthDetails);
+			healthDetails.setCreatedDateTimeStamp(LocalDateTime.now());
+			healthDetails.setModifiedDateTimeStamp(LocalDateTime.now());
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+			
+			
+			
+			
+		}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return customResponse;
+	}
+
+	
+	
+}
